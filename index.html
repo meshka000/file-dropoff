@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>File Drop-off - Steam Style</title>
-    <link rel="stylesheet" href="stile.css">
+    <link rel="stylesheet" href="stile.css"/>
+    <link rel="icon" href="img/S_logo.png"/>
 </head>
 <body>
+    <header class="header">
+        <div class="modal_1" id="modal" onmouseover="showModal()">
+            <a class="dbn" href="#">Главная</a>
+            <a class="dbn" href="#">Рекомендации</a>
+            <a class="dbn" href="#">Список желаемого</a>
+            <a class="dbn" href="#">Предметы за очки</a>
+            <a class="dbn" href="#">Новости</a>
+            <a class="dbn" href="#">Статистика</a>
+        </div>
+        <div class="modal_2" id="modal1" onmouseover="showModal()">
+            <a class="dbn" href="#">Главная</a>
+            <a class="dbn" href="#">Рекомендации</a>
+            <a class="dbn" href="#">Список желаемого</a>
+            <a class="dbn" href="#">Предметы за очки</a>
+            <a class="dbn" href="#">Новости</a>
+            <a class="dbn" href="#">Статистика</a>
+        </div>
+        <div class="container">
+            <div class="left">
+                <img src="img/logo_steam.png" alt="logo" class="logo"/>
+            </div>
+            <div class="center">
+                <a href="https://store.steampowered.com/?l=russian" onmouseover="showModal()">МАГАЗИН</a>
+                <a href="https://steamcommunity.com/" onmouseover="showModal()">СООБЩЕСТВО</a>
+                <a href="https://store.steampowered.com/about/?l=russian">ИНФОРМАЦИЯ</a>
+                <a href="https://help.steampowered.com/ru/">ПОДДЕРЖКА</a>
+            </div>
+            <div class="right">
+                <div class="logo2">
+                    <a class="btm" href="https://store.steampowered.com/about/">
+                        <img src="img/btn_header_installsteam_download.png" alt=""/>
+                       Установить Steam
+                    </a>
+                </div>
+                    
+                <a href="https://store.steampowered.com/login/?l=russian">
+                войти
+                </a>
+            </div>
+        </div>
+    </header>
+    <script src="script.js"></script>
+
     <div class="container">
-        <header class="steam-header">
-            <div class="logo">
-                <img src="img/steam-logo.png" alt="Steam Logo" style="height: 25px; margin-right: 10px; vertical-align: middle;">
-                FILE DROP-OFF
-            </div>
-            <nav class="nav">
-                <a href="#" class="nav-link active">МАГАЗИН</a>
-                <a href="#" class="nav-link">СООБЩЕСТВО</a>
-                <a href="#" class="nav-link">ИНФОРМАЦИЯ</a>
-                <a href="#" class="nav-link">ПОДДЕРЖКА</a>
-            </nav>
-            <div class="profile-actions">
-                <a href="#" class="nav-link">
-                    <img src="img/user-icon.png" alt="User" style="height: 16px; margin-right: 5px; vertical-align: middle;">
-                    ВОЙТИ
-                </a>
-                <a href="#" class="nav-link download">
-                    <img src="img/download-icon.png" alt="Download" style="height: 16px; margin-right: 5px; vertical-align: middle;">
-                    СКАЧАТЬ STEAM
-                </a>
-            </div>
-        </header>
         <main class="main-content">
             <div class="form-container">
                 <h1 class="title">Отправка файлов и сообщений</h1>
@@ -40,10 +62,12 @@
                         <label for="name" class="form-label">Ваше имя</label>
                         <input type="text" id="name" name="name" class="form-input" placeholder="Введите ваше имя" required>
                     </div>
+                    
                     <div class="form-group">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
                     </div>
+                    
                     <div class="form-group">
                         <label for="type" class="form-label">Тип обращения</label>
                         <select id="type" name="type" class="form-select" required>
@@ -53,29 +77,35 @@
                             <option value="project">Проект</option>
                         </select>
                     </div>
+                    
                     <div class="form-group">
                         <label for="message" class="form-label">Сообщение</label>
                         <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Опишите ваше обращение..." required></textarea>
                     </div>
+                    
                     <div class="form-group">
                         <label for="file" class="form-label">Прикрепить файл</label>
                         <input type="file" id="file" name="file" class="form-file">
                         <div id="fileInfo" class="file-info"></div>
                     </div>
+                    
                     <button type="submit" class="btn-submit">Отправить</button>
                 </form>
             </div>
         </main>
+        
         <footer class="footer">
             © 2025 File Drop-off. Все файлы обрабатываются владельцем напрямую.
         </footer>
     </div>
+    
     <div id="notification" class="notification hidden">
         <div class="notification-content">
             <span class="notification-icon">✓</span>
             <span class="notification-text">Ваше сообщение успешно отправлено!</span>
         </div>
     </div>
+    
     <script src="ss.js"></script>
 </body>
 </html>
