@@ -8,15 +8,19 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
+        <header class="steam-header">
             <div class="logo">FILE DROP-OFF</div>
             <nav class="nav">
-                <a href="#" class="nav-link">Главная</a>
-                <a href="#" class="nav-link">Справка</a>
-                <a href="#" class="nav-link">Контакты</a>
+                <a href="#" class="nav-link active">МАГАЗИН</a>
+                <a href="#" class="nav-link">СООБЩЕСТВО</a>
+                <a href="#" class="nav-link">ИНФОРМАЦИЯ</a>
+                <a href="#" class="nav-link">ПОДДЕРЖКА</a>
             </nav>
+            <div class="profile-actions">
+                <a href="#" class="nav-link">ВОЙТИ</a>
+                <a href="#" class="nav-link download">СКАЧАТЬ STEAM</a>
+            </div>
         </header>
-
         <main class="main-content">
             <div class="form-container">
                 <h1 class="title">Отправка файлов и сообщений</h1>
@@ -27,12 +31,10 @@
                         <label for="name" class="form-label">Ваше имя</label>
                         <input type="text" id="name" name="name" class="form-input" placeholder="Введите ваше имя" required>
                     </div>
-
                     <div class="form-group">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
                     </div>
-
                     <div class="form-group">
                         <label for="type" class="form-label">Тип обращения</label>
                         <select id="type" name="type" class="form-select" required>
@@ -42,35 +44,29 @@
                             <option value="project">Проект</option>
                         </select>
                     </div>
-
                     <div class="form-group">
                         <label for="message" class="form-label">Сообщение</label>
-                        <textarea id="message" name="message" class="form-textarea" placeholder="Опишите ваше обращение..." rows="5" required></textarea>
+                        <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Опишите ваше обращение..." required></textarea>
                     </div>
-
                     <div class="form-group">
                         <label for="file" class="form-label">Прикрепить файл</label>
                         <input type="file" id="file" name="file" class="form-file">
-                        <div class="file-info" id="fileInfo"></div>
+                        <div id="fileInfo" class="file-info"></div>
                     </div>
-
                     <button type="submit" class="btn-submit">Отправить</button>
                 </form>
             </div>
         </main>
-
         <footer class="footer">
-            <p>&copy; 2025 File Drop-off. Все файлы обрабатываются владельцем напрямую.</p>
+            © 2025 File Drop-off. Все файлы обрабатываются владельцем напрямую.
         </footer>
     </div>
-
     <div id="notification" class="notification hidden">
         <div class="notification-content">
             <span class="notification-icon">✓</span>
             <span class="notification-text">Ваше сообщение успешно отправлено!</span>
         </div>
     </div>
-
     <script src="ss.js"></script>
 </body>
 </html>
