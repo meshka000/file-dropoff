@@ -13,61 +13,126 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    min-height: 100vh;
+/* Steam Header Styles from Steam_project */
+.header{
+    width: 100%;
+    height: 104px;
+    background-color: #171d25;
+    position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 }
 
-/* Header - Steam Style */
-.header {
-    background: #171a21;
-    padding: 15px 40px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    border-bottom: 2px solid #00adee;
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+}
+
+.left{
+    width: 22%;
+    height: 100%;
+    display: flex;
     align-items: center;
+    padding-left: 2%;
 }
 
-.logo {
-    color: #c7d5e0;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-.logo:hover {
-    color: #00adee;
-}
-
-.nav {
+.center{
+    width: 51%;
+    height: 100%;
     display: flex;
-    gap: 30px;
     align-items: center;
+    justify-content: space-around;
+    font-family: "Motiva Sans", "Twemoji", "Noto Sans", Helvetica, sans-serif;
 }
 
-.nav-link {
+.right{
+    width: 25%;
+    height: 100%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2%;
+}
+
+.logo{
+    width: 176px;
+    height: 44px;
+}
+
+a:hover{
+    color: #1a9fff;
+    text-decoration: underline;
+}
+
+.btm{
+    display: flex;
+    padding: 5px 8px;
+    background-color: #5c7e10;
+    color: #e5e4dc;
+    width: 160px;
+    height: 34px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btm:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #6c9018;
+}
+
+.modal-parent {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.modal_1{
+    width: 11vw;
+    height: 177px;
+    background-color: #3d4450;
+    display: none;
+    position: absolute;
+    top: 104px;
+    left: calc(50% - 600px + 15%);
+    z-index: 1000;
+}
+
+.logo2{
+    height: 21px;
+}
+
+.modal_2{
+    width: 11vw;
+    height: 207px;
+    background-color: #3d4450;
+    display: none;
+    position: absolute;
+    top: 104px;
+    left: calc(50% - 600px + 26%);
+    z-index: 1000;
+}
+
+.dbn {
+    display: block;
+    padding: 8px 12px;
     color: #c7d5e0;
     text-decoration: none;
-    padding: 8px 16px;
-    transition: all 0.3s ease;
-    border-radius: 3px;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-.nav-link:hover {
-    background: #00adee;
-    color: #171a21;
-    transform: translateY(-2px);
+.dbn:hover {
+    background-color: #5c7e10;
+    color: #e5e4dc;
 }
 
-/* Main Content */
-.main-content {
+a {
+    color: #c7d5e0;
+    text-decoration: none;
+}
+
+/* Main Content */.main-content {
     flex: 1;
     padding: 40px 20px;
     display: flex;
@@ -265,12 +330,16 @@ body {
     }
     
     .header {
+        height: auto;
         padding: 15px 20px;
+    }
+    
+    .container {
         flex-direction: column;
         gap: 15px;
     }
     
-    .nav {
+    .left, .center, .right {
         width: 100%;
         justify-content: center;
     }
@@ -283,119 +352,5 @@ body {
         top: 10px;
         right: 10px;
         left: 10px;
-    }
-}
-
-/* Steam Header - New Enhanced Style */
-.steam-header {
-    background: linear-gradient(to bottom, #1b2838 0%, #171a21 100%);
-    padding: 15px 40px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-    border-bottom: 3px solid #1b6fa8;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
-
-.steam-header::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #66c0f4, transparent);
-}
-
-.steam-header .logo {
-    color: #fff;
-    font-size: 26px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    text-shadow: 0 0 15px rgba(102, 192, 244, 0.5);
-    transition: all 0.3s ease;
-}
-
-.steam-header .logo:hover {
-    color: #66c0f4;
-    text-shadow: 0 0 20px rgba(102, 192, 244, 0.8);
-}
-
-.steam-header .nav {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-}
-
-.steam-header .nav-link {
-    color: #b8b6b4;
-    text-decoration: none;
-    padding: 10px 18px;
-    transition: all 0.3s ease;
-    border-radius: 2px;
-    font-size: 13px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    position: relative;
-    background: transparent;
-}
-
-.steam-header .nav-link:hover {
-    background: linear-gradient(to bottom, #417a9b 0%, #2a5a7a 100%);
-    color: #fff;
-    box-shadow: 0 0 10px rgba(102, 192, 244, 0.3);
-}
-
-.steam-header .nav-link.active {
-    background: linear-gradient(to bottom, #66c0f4 0%, #417a9b 100%);
-    color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.steam-header .profile-actions {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.steam-header .profile-actions .nav-link {
-    padding: 8px 16px;
-    background: rgba(102, 192, 244, 0.1);
-    border: 1px solid rgba(102, 192, 244, 0.3);
-}
-
-.steam-header .profile-actions .nav-link:hover {
-    background: rgba(102, 192, 244, 0.2);
-    border-color: #66c0f4;
-}
-
-.steam-header .profile-actions .download {
-    background: linear-gradient(to bottom, #799905 0%, #536904 100%);
-    border: 1px solid #799905;
-    color: #fff;
-    font-weight: 600;
-}
-
-.steam-header .profile-actions .download:hover {
-    background: linear-gradient(to bottom, #8fb80a 0%, #799905 100%);
-    box-shadow: 0 0 15px rgba(143, 184, 10, 0.5);
-}
-
-/* Steam Header Responsive */
-@media (max-width: 768px) {
-    .steam-header {
-        padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .steam-header .nav,
-    .steam-header .profile-actions {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
     }
 }
